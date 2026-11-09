@@ -1,0 +1,8 @@
+preciso de um site para clientes acessarem e comprarem produtos de um bar chamado 
+"bar do vaquinha". Ele deve conter uma estrutura de navegaçao intuitiva para  
+todas as idades, deve ser funcional para os usuarios executarem pagamento via pix. 
+O dono "Vaquinha" não vende bebidas alcolicas para menores que frequemtam o bar,  
+clientes de meia idade tambem costumam se reunir no estabelecimento. os mais jovens costumam 
+comprar produtos de balcao como: refrigerantes, amendoim, doces e salgadinhos. 
+o site deve conter o quanto o cliente tem de divida e deve ter o foco para os clientes 
+agendarem entregas. gere o HTML, CSS e JS, o banco de dados e ademais não é necessario
