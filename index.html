@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d2b">
+  <title>Bar do Vaquinha | Peça sem sair de casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline">BAR DO VAQUINHA <span>•</span> Seu bar, agora na sua casa</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Bar do Vaquinha - início">
+      <span class="brand-mark">🐮</span>
+      <span><strong>Bar do Vaquinha</strong><small>BOA CONVERSA. BOM PETISCO.</small></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#entrega">Agendar entrega</a>
+      <a href="#conta">Minha conta</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrinho">🛒 <span>Carrinho</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">PEÇA FÁCIL, RECEBA COMBINADO</span>
+        <h1>O sabor do<br><em>Bar do Vaquinha</em><br>na sua casa.</h1>
+        <p>Escolha seus favoritos, monte seu pedido e agende o melhor horário para receber.</p>
+        <a class="primary-button" href="#produtos">Ver produtos <span>→</span></a>
+        <div class="hero-note"><span>✓</span> Atendimento simples e direto</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de lanches e refrigerante">
+        <div class="art-circle"></div>
+        <div class="art-label label-one">🍬 Doces</div>
+        <div class="art-label label-two">🥤 Geladinho</div>
+        <div class="snack-emoji">🥤</div>
+        <div class="snack-emoji snack-two">🥜</div>
+        <div class="art-stamp">DESDE<br><b>SEMPRE</b></div>
+      </div>
+    </section>
+
+    <section class="trust-row" aria-label="Vantagens">
+      <div><span>🛵</span><p><b>Entrega agendada</b><small>Você escolhe o horário</small></p></div>
+      <div><span>⚡</span><p><b>Pagamento via PIX</b><small>Prático e rápido</small></p></div>
+      <div><span>🤝</span><p><b>Conta transparente</b><small>Consulte seu saldo</small></p></div>
+    </section>
+
+    <section class="section products-section" id="produtos">
+      <div class="section-heading">
+        <div><span class="eyebrow">ESCOLHA O QUE VAI LEVAR</span><h2>Nosso balcão</h2></div>
+        <label class="search-box">⌕ <input id="searchInput" type="search" placeholder="Buscar produto..." aria-label="Buscar produto"></label>
+      </div>
+      <div class="category-list" id="categories">
+        <button class="category active" data-category="Todos">Todos</button>
+        <button class="category" data-category="Bebidas">🥤 Bebidas</button>
+        <button class="category" data-category="Salgadinhos">🥨 Salgadinhos</button>
+        <button class="category" data-category="Doces">🍬 Doces</button>
+        <button class="category" data-category="Petiscos">🥜 Petiscos</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="delivery-section" id="entrega">
+      <div class="delivery-copy">
+        <span class="eyebrow">NO SEU TEMPO</span>
+        <h2>Receba do seu jeito.</h2>
+        <p>Escolha a data e o período desejado. A equipe do bar confirma a disponibilidade do horário.</p>
+        <div class="delivery-benefit">📍 <span>Informe o endereço no agendamento para facilitar a entrega.</span></div>
+      </div>
+      <form class="delivery-form" id="deliveryForm">
+        <h3>Agendar entrega</h3>
+        <label>Seu nome<input required name="customer" placeholder="Como podemos chamar você?"></label>
+        <label>Telefone / WhatsApp<input required name="phone" type="tel" placeholder="(00) 00000-0000"></label>
+        <label>Endereço completo<input required name="address" placeholder="Rua, número, bairro e referência"></label>
+        <div class="form-row">
+          <label>Data<input required name="date" id="deliveryDate" type="date"></label>
+          <label>Período<select required name="period"><option value="">Selecione</option><option>Manhã (8h–12h)</option><option>Tarde (12h–18h)</option><option>Noite (18h–21h)</option></select></label>
+        </div>
+        <label>Observações <span class="optional">(opcional)</span><textarea name="notes" rows="2" placeholder="Alguma informação para a entrega?"></textarea></label>
+        <button class="primary-button full-button" type="submit">Solicitar agendamento <span>→</span></button>
+        <small class="form-hint">O agendamento é uma solicitação e depende de confirmação do estabelecimento.</small>
+      </form>
+    </section>
+
+    <section class="account-section section" id="conta">
+      <div><span class="eyebrow">SEMPRE ÀS CLARAS</span><h2>Minha conta</h2><p>Consulte o saldo devedor registrado pelo estabelecimento.</p></div>
+      <div class="account-card">
+        <div class="account-top"><span>Saldo em aberto</span><span class="account-icon">▤</span></div>
+        <strong id="debtAmount">R$ 0,00</strong>
+        <small id="debtNote">Exemplo demonstrativo — saldo não conectado a uma conta real.</small>
+        <button class="text-button" id="showDebtInfo">Como funciona? <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="pix-section">
+      <div class="pix-icon">₱</div>
+      <div><span class="eyebrow">PAGUE COM PRATICIDADE</span><h2>PIX na hora de fechar o pedido</h2><p>O site prepara o resumo e exibe a chave PIX cadastrada pelo bar.</p></div>
+      <a href="#produtos" class="outline-button">Montar pedido</a>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#inicio">🐮 Bar do Vaquinha</a><span>Feito para pedir com facilidade.</span><span>© <span id="year"></span> Bar do Vaquinha</span></footer>
+
+  <div class="overlay" id="cartOverlay" aria-hidden="true">
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer-header"><div><span class="eyebrow">SEU PEDIDO</span><h2 id="cartTitle">Carrinho</h2></div><button class="close-button" id="closeCart" aria-label="Fechar carrinho">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-bottom">
+        <div class="total-line"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+        <button class="primary-button full-button" id="checkoutButton">Continuar para PIX <span>→</span></button>
+        <small>O pagamento só será confirmado após validação pelo estabelecimento.</small>
+      </div>
+    </aside>
+  </div>
+
+  <div class="modal-backdrop" id="pixModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="pixTitle">
+      <button class="close-button modal-close" id="closePix" aria-label="Fechar">×</button>
+      <span class="eyebrow">FINALIZAR PEDIDO</span><h2 id="pixTitle">Pague com PIX</h2>
+      <p>Confira o valor e copie a chave PIX do estabelecimento para pagar no aplicativo do seu banco.</p>
+      <div class="pix-total" id="pixTotal">R$ 0,00</div>
+      <div class="pix-key"><code id="pixKey">SUA-CHAVE-PIX-AQUI</code><button id="copyPix">Copiar</button></div>
+      <p class="demo-warning">A chave acima é um exemplo. Substitua pela chave real do bar. Este protótipo não gera QR Code nem confirma pagamentos automaticamente.</p>
+      <button class="primary-button full-button" id="finishOrder">Entendi, finalizar pedido</button>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

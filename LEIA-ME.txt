@@ -1,0 +1,21 @@
+BAR DO VAQUINHA — protótipo front-end
+
+Arquivos:
+- index.html: estrutura das páginas e componentes.
+- style.css: identidade visual responsiva.
+- script.js: catálogo, busca, filtros, carrinho, cálculo de total, solicitação de entrega e cópia da chave PIX.
+
+Como executar:
+1. Extraia o ZIP.
+2. Abra a pasta no VS Code.
+3. Abra o index.html no navegador (ou use a extensão Live Server).
+
+ANTES DE PUBLICAR:
+- Em script.js, substitua 5511999999999 pelo WhatsApp real do bar.
+- Em index.html, substitua SUA-CHAVE-PIX-AQUI pela chave PIX real.
+- O saldo devedor exibido é demonstrativo e não está ligado a clientes reais.
+- O pagamento PIX NÃO é confirmado automaticamente. Para confirmação automática e geração de QR Code é necessário integrar um provedor de pagamento e um backend.
+- Os produtos incluídos são não alcoólicos, mantendo o catálogo apropriado para o público variado do estabelecimento.
+- O formulário de entrega abre uma conversa no WhatsApp com os dados preenchidos. O pedido só fica agendado após confirmação do bar.
+
+Este projeto não inclui banco de dados nem backend, conforme solicitado.
